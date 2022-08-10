@@ -1,0 +1,343 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: white !important;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+body,
+html,
+.App,
+#root,
+.auth-wrapper {
+  width: 100%;
+  height: 100%;
+}
+/* Nabvar */
+.navbar-light {
+  background-color: #ffffff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+}
+.container-fluid {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* form section */
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+/* ouline focus */
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border-color: #000000;
+  box-shadow: none;
+  outline: 0 none;
+}
+input[type="radio"]:focus {
+  border-color: transparent;
+  box-shadow: none;
+  outline: 0 none;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+/* remove border focus in button */
+.btn.btn-primary {
+  border-color: #0062c4;
+  font-size: medium;
+  background-color: #0062c4;
+  outline: 0 none;
+}
+
+.btn.btn-primary:hover {
+  background-color: #0062c4;
+  color: white;
+  font-size: medium;
+  outline: 0 none;
+  opacity: 0.8;
+}
+
+.btn.btn-outline-primary {
+  color: #0062c4;
+  border-color: #0062c4;
+  font-size: medium;
+  outline: 0 none;
+}
+
+.btn.btn-outline-primary:hover {
+  background-color: #0062c4;
+  border-color: transparent;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.btn.btn-primary:focus,
+.btn.btn-dark:focus,
+.btn.btn-danger:focus,
+.btn.btn-success:focus,
+.btn.btn-info:focus,
+.btn.btn-warning:focus {
+  border-color: transparent;
+  box-shadow: none;
+  outline-color: transparent;
+}
+
+.btn.btn-outline-primary:focus,
+.btn.btn.btn-outline-dark:focus,
+.btn.btn-outline-danger:focus,
+.btn.btn-outline-success:focus,
+.btn.btn-outline-info:focus,
+.btn.btn-outline-warning:focus {
+  border-color: transparent;
+  box-shadow: none;
+  outline-color: transparent;
+}
+
+.btn.btn-light:focus {
+  border: none;
+  box-shadow: none;
+  outline: 0 none;
+}
+
+/* navbar */
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+/* container width */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 970px;
+  }
+}
+
+/* button gradient */
+
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #004077 0%,
+    #cae5ff 51%,
+    #0062c4 100%
+  );
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 100px;
+  display: block;
+  font-size: medium;
+  border: none;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-grad:focus {
+  border: none;
+  box-shadow: none;
+  outline: 0 none;
+}
+
+/* Footer social media */
+.social {
+  color: white;
+  font-size: medium;
+  padding: 10px;
+  margin: 5px;
+}
+.social:hover {
+  color: #0062c4;
+  font-size: medium;
+  padding: 10px;
+  margin: 5px;
+}
+
+/* remove input control */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Preloader */
+.spinner {
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.spinner span {
+  font-size: 2rem;
+  animation: fade 1s linear 0s infinite;
+  padding-right: 1rem;
+}
+
+.half-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #0062c4;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.5s linear 0s infinite;
+}
+
+.completed {
+  font-size: 2rem;
+  color: #0062c4;
+  animation: bigger 1s linear;
+  display: none;
+}
+
+@keyframes bigger {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(2);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* admin panel card */
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  border: none;
+  position: relative;
+  margin-bottom: 30px;
+  box-shadow: 0 0.46875rem 2.1875rem rgba(90, 97, 105, 0.1),
+    0 0.9375rem 1.40625rem rgba(90, 97, 105, 0.1),
+    0 0.25rem 0.53125rem rgba(90, 97, 105, 0.12),
+    0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1);
+}
+.l-bg-cherry {
+  background: linear-gradient(to right, #493240, #f09) !important;
+  color: #fff;
+}
+
+.l-bg-blue-dark {
+  background: linear-gradient(to right, #373b44, #4286f4) !important;
+  color: #fff;
+}
+
+.l-bg-green-dark {
+  background: linear-gradient(to right, #0a504a, #38ef7d) !important;
+  color: #fff;
+}
+
+.l-bg-orange-dark {
+  background: linear-gradient(to right, #a86008, #ffba56) !important;
+  color: #fff;
+}
+
+.card .card-statistic-3 .card-icon-large .fas,
+.card .card-statistic-3 .card-icon-large .far,
+.card .card-statistic-3 .card-icon-large .fab,
+.card .card-statistic-3 .card-icon-large .fal {
+  font-size: 110px;
+}
+
+.card .card-statistic-3 .card-icon {
+  text-align: center;
+  line-height: 50px;
+  margin-left: 15px;
+  color: #000;
+  position: absolute;
+  right: -5px;
+  top: 20px;
+  opacity: 0.1;
+}
+
+.l-bg-cyan {
+  background: linear-gradient(135deg, #289cf5, #84c0ec) !important;
+  color: #fff;
+}
+
+.l-bg-green {
+  background: linear-gradient(135deg, #23bdb8 0%, #43e794 100%) !important;
+  color: #fff;
+}
+
+.l-bg-orange {
+  background: linear-gradient(to right, #f9900e, #ffba56) !important;
+  color: #fff;
+}
+
+.l-bg-cyan {
+  background: linear-gradient(135deg, #289cf5, #84c0ec) !important;
+  color: #fff;
+}
+
+/* text gradient */
+.text {
+  text-transform: uppercase;
+  background: linear-gradient(to left, #0062c4 10%, #a9a9a9 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 20vw;
+  font-family: "Poppins", sans-serif;
+}
