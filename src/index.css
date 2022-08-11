@@ -335,9 +335,48 @@ input[type="number"] {
 /* text gradient */
 .text {
   text-transform: uppercase;
-  background: linear-gradient(to left, #0062c4 10%, #a9a9a9 100%);
+  background: linear-gradient(to left, #0062c4 10%, #dad0d0 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 20vw;
+  font-size: 7vw;
   font-family: "Poppins", sans-serif;
+}
+
+/* table hover */
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+  background-color: rgba(0, 0, 0, 0.001);
+}
+
+/* change the scroll style of table */
+.scrollme {
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 500px;
+  border-radius: 10px;
+}
+
+/* change the style of scroll bar in table */
+.scrollme::-webkit-scrollbar {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+.scrollme::-moz-scrollbar {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+/* show scroll bar in table when hover */
+.scrollme::-webkit-scrollbar-thumb {
+  background-color: #0062c4;
+  border-radius: 10px;
+}
+.scrollme::-moz-scrollbar-thumb {
+  background-color: #0062c4;
+  border-radius: 10px;
+}
+
+/* font size text table */
+.table-condensed {
+  font-size: 14px;
 }

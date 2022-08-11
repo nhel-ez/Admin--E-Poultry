@@ -223,9 +223,7 @@ const AdminDashboard = (props) => {
           <div className="container mb-5">
             <div className="row d-flex align-items-center justify-content-center">
               <div className="container">
-                <h1 class="text" style={{ fontSize: "60px" }}>
-                  {countUsers}
-                </h1>
+                <h1 class="text">{countUsers}</h1>
                 <h5 style={{ color: "#004077" }}>Total Users</h5>
               </div>
             </div>
@@ -237,9 +235,7 @@ const AdminDashboard = (props) => {
           <div className="container mb-5">
             <div className="row d-flex align-items-center justify-content-center">
               <div className="container">
-                <h1 class="text" style={{ fontSize: "60px" }}>
-                  {totalPriceSold}
-                </h1>
+                <h1 class="text">{totalPriceSold}</h1>
                 <h5 style={{ color: "#004077" }}>Total Selling Price</h5>
               </div>
             </div>
@@ -251,9 +247,7 @@ const AdminDashboard = (props) => {
           <div className="container mb-5">
             <div className="row d-flex align-items-center justify-content-center">
               <div className="container">
-                <h1 class="text" style={{ fontSize: "60px" }}>
-                  {totalPriceLoss}
-                </h1>
+                <h1 class="text">{totalPriceLoss}</h1>
                 <h5 style={{ color: "#004077" }}>Total Loss Price</h5>
               </div>
             </div>

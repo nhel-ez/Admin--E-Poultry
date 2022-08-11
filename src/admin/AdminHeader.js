@@ -10,7 +10,7 @@ const AdminHeader = (props) => {
       <div className="container-fluid">
         <Link
           className="navbar-brand"
-          to={"/Dashboard"}
+          to={"/admin/dashboard"}
           onClick={() => {
             PreLoader();
           }}
@@ -31,7 +31,7 @@ const AdminHeader = (props) => {
           <div className="navbar-nav">
             <Link
               className="nav-link"
-              to={"/Dashboard"}
+              to={"/admin/dashboard"}
               onClick={() => {
                 PreLoader();
               }}
@@ -41,7 +41,7 @@ const AdminHeader = (props) => {
             </Link>
             <Link
               className="nav-link"
-              to={"/about"}
+              to={"/admin/about"}
               style={{ textAlign: "center" }}
               onClick={() => {
                 PreLoader();
@@ -61,7 +61,7 @@ const AdminHeader = (props) => {
               <div className="dropdown-menu">
                 <Link
                   className="dropdown-item"
-                  to={"/checkout"}
+                  to={"/admin/checkout"}
                   onClick={() => {
                     PreLoader();
                   }}
@@ -70,7 +70,7 @@ const AdminHeader = (props) => {
                 </Link>
                 <Link
                   className="dropdown-item"
-                  to={"/to-ship"}
+                  to={"/admin/toship"}
                   onClick={() => {
                     PreLoader();
                   }}
@@ -79,7 +79,7 @@ const AdminHeader = (props) => {
                 </Link>
                 <Link
                   className="dropdown-item"
-                  to={"/cancel"}
+                  to={"/admin/cancel"}
                   onClick={() => {
                     PreLoader();
                   }}
@@ -88,7 +88,7 @@ const AdminHeader = (props) => {
                 </Link>
                 <Link
                   className="dropdown-item"
-                  to={"/delivered"}
+                  to={"/admin/delivered"}
                   onClick={() => {
                     PreLoader();
                   }}
@@ -99,7 +99,7 @@ const AdminHeader = (props) => {
             </div>
             <Link
               className="nav-link"
-              to={"/profile"}
+              to={"/admin/profile"}
               onClick={() => {
                 PreLoader();
               }}
