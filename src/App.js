@@ -14,6 +14,7 @@ import AdminToShip from "./admin/menus/AdminToShip";
 import AdminCancel from "./admin/menus/AdminCancel";
 import AdminpProfile from "./admin/menus/AdminProfile";
 import AdminDelivered from "./admin/menus/AdminDelivered";
+import AdminTracking from "./admin/menus/AdminTracking";
 import ToShipForm from "./admin/forms/ToShipForm";
 import DeliveredForm from "./admin/forms/DeliveredForm";
 import ChangePasswordForm from "./admin/forms/ChangePassword";
@@ -35,6 +36,7 @@ function App() {
           <Route exact path="/admin/toship" element={<AdminToShip />} />
           <Route exact path="/admin/cancel" element={<AdminCancel />} />
           <Route exact path="/admin/delivered" element={<AdminDelivered />} />
+          <Route exact path="/admin/tracking" element={<AdminTracking />} />
           <Route exact path="/admin/profile" element={<AdminpProfile />} />
           <Route exact path="/admin/toship/:id" element={<ToShipForm />} />
           <Route

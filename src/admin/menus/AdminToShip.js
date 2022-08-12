@@ -91,7 +91,13 @@ const AdminToShip = (props) => {
                     Payment Method
                   </th>
                   <th scope="col" className="py-2">
-                    Arrival
+                    Date of Checkout
+                  </th>
+                  <th scope="col" className="py-2">
+                    Date To Ship
+                  </th>
+                  <th scope="col" className="py-2">
+                    Expected Arrival
                   </th>
                   <th scope="col" className="py-2">
                     Option
@@ -109,13 +115,15 @@ const AdminToShip = (props) => {
                       <td className="py-2">{data.address}</td>
                       <td className="py-2">{data.productName}</td>
                       <td className="py-2">{data.quantity}</td>
-                      <td className="py-2">{data.totalPrice}</td>
+                      <td className="py-2">₱{data.totalPrice}.00</td>
                       <td className="py-2">{data.paymentMethod}</td>
+                      <td className="py-2">{data.timestampCheckout}</td>
+                      <td className="py-2">{data.timestampToShip}</td>
                       <td className="py-2">{data.arrival}</td>
 
                       <td className="py-2">
                         <Link
-                          className="btn btn-success"
+                          className="btn btn-success btn-sm"
                           to={{
                             pathname: `/admin/delivered/${data.id}`,
                           }}

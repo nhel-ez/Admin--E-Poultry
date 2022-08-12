@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from ".././firebase";
 import { query, collection, onSnapshot } from "firebase/firestore";
@@ -199,7 +199,12 @@ const AdminDashboard = (props) => {
                     <p className="lead" style={{ marginBottom: "40px" }}>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
-                    <button className="btn-grad">Track Orders Now!</button>
+                    <Link
+                      to="/admin/tracking"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <button className="btn-grad">Track Orders Now!</button>
+                    </Link>
                   </center>
                 </div>
               );

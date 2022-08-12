@@ -90,6 +90,9 @@ const AdminCancel = (props) => {
                   <th scope="col" className="py-2">
                     Payment Method
                   </th>
+                  <th scope="col" className="py-2">
+                    Date of Canceled
+                  </th>
                 </tr>
               </thead>
               {product.map((data) => {
@@ -103,8 +106,9 @@ const AdminCancel = (props) => {
                       <td className="py-2">{data.address}</td>
                       <td className="py-2">{data.productName}</td>
                       <td className="py-2">{data.quantity}</td>
-                      <td className="py-2">{data.totalPrice}</td>
+                      <td className="py-2">₱{data.totalPrice}.00</td>
                       <td className="py-2">{data.paymentMethod}</td>
+                      <td className="py-2">{data.timestampCancel}</td>
                     </tr>
                   </tbody>
                 );

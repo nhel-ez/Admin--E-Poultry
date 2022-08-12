@@ -69,8 +69,9 @@ const AdminpProfile = (props) => {
                           }}
                         >
                           <i
-                            className="fas fa-user-circle h1 text-primary"
+                            className="fas fa-user-circle h1"
                             style={{
+                              color: "#0062c4",
                               fontSize: "120px",
                             }}
                           ></i>

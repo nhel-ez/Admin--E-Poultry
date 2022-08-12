@@ -2,7 +2,13 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { auth, db } from "../../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { updateDoc, collection, doc, onSnapshot } from "firebase/firestore";
+import {
+  updateDoc,
+  collection,
+  doc,
+  onSnapshot,
+  serverTimestamp,
+} from "firebase/firestore";
 import AdminHeader from "../AdminHeader";
 import AdminFooter from "../AdminFooter";
 
@@ -14,7 +20,7 @@ const DeliveredForm = (_) => {
   const [product, setProduct] = useState([]);
   const [status, setStatus] = useState(data.status);
   const [arrival, setArrival] = useState("");
-  const [timestamp, setTimestamp] = useState("");
+  const [timestampDelivered, setTimestampDelivered] = useState("");
 
   const computeArrival = () => {
     const current = new Date();
@@ -24,15 +30,16 @@ const DeliveredForm = (_) => {
 
   const convertTimestamp = () => {
     const current = new Date();
-    const timestamp = new Date(current.getTime());
-    setTimestamp(timestamp.toDateString());
+    const timestampDelivered = new Date(current.getTime());
+    setTimestampDelivered(timestampDelivered.toDateString());
   };
 
   const productDelivered = async (e) => {
     setProduct([...product]);
     await updateDoc(doc(db, "product", data.id), {
       status: "Delivered",
-      timestamp: timestamp,
+      timestampDelivered: timestampDelivered,
+      timestamp: serverTimestamp(),
     });
     if (product) navigate("/admin/delivered");
   };
@@ -103,8 +110,10 @@ const DeliveredForm = (_) => {
                             type="text"
                             className="form-control border-0 bg-light"
                             id="status"
-                            value={timestamp}
-                            onChange={(e) => setTimestamp(e.target.value)}
+                            value={timestampDelivered}
+                            onChange={(e) =>
+                              setTimestampDelivered(e.target.value)
+                            }
                             readOnly
                           />
                         </div>
