@@ -115,7 +115,7 @@ const AdminToShip = (props) => {
                       <td className="py-2">{data.address}</td>
                       <td className="py-2">{data.productName}</td>
                       <td className="py-2">{data.quantity}</td>
-                      <td className="py-2">₱{data.totalPrice}.00</td>
+                      <td className="py-2">₱{data.totalPrice}</td>
                       <td className="py-2">{data.paymentMethod}</td>
                       <td className="py-2">{data.timestampCheckout}</td>
                       <td className="py-2">{data.timestampToShip}</td>

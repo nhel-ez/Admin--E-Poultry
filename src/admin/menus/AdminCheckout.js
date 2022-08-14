@@ -90,7 +90,7 @@ const AdminCheckout = (props) => {
                     Payment Method
                   </th>
                   <th scope="col" className="py-2">
-                    Date of Order
+                    Date of Checkout
                   </th>
                   <th scope="col" className="py-2">
                     Expected Arrival
@@ -112,7 +112,7 @@ const AdminCheckout = (props) => {
                       <td className="py-2">{data.address}</td>
                       <td className="py-2">{data.productName}</td>
                       <td className="py-2">{data.quantity}</td>
-                      <td className="py-2">₱{data.totalPrice}.00</td>
+                      <td className="py-2">₱{data.totalPrice}</td>
                       <td className="py-2">{data.paymentMethod}</td>
                       <td className="py-2">{data.timestampCheckout}</td>
                       <td className="py-2">{data.arrival}</td>
