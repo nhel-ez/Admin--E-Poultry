@@ -95,7 +95,7 @@ const AdminHeader = (props) => {
                 to={"/"}
                 style={{ textAlign: "center" }}
               >
-                Orders
+                Customer Orders
               </Link>
               <div className="dropdown-menu">
                 <Link
