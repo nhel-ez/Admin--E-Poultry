@@ -17,13 +17,13 @@ import {
   addDoc,
 } from "firebase/firestore";
 const firebaseConfig = {
-  apiKey: "AIzaSyALAKmYd2b4nt6HvO60I_FuNv-Kp4aSggo",
-  authDomain: "e-poultry-8888e.firebaseapp.com",
-  projectId: "e-poultry-8888e",
-  storageBucket: "e-poultry-8888e.appspot.com",
-  messagingSenderId: "136698992338",
-  appId: "1:136698992338:web:2f62fb99be658f1ea7bf0b",
-  measurementId: "G-6W2DN8EBDM",
+  apiKey: "AIzaSyAb_POgnk9Aa5B05gGEas76_JrSQx0hJcU",
+  authDomain: "e-poultry-3e154.firebaseapp.com",
+  projectId: "e-poultry-3e154",
+  storageBucket: "e-poultry-3e154.appspot.com",
+  messagingSenderId: "370853038941",
+  appId: "1:370853038941:web:d811e8a786dff4d3f0f6b4",
+  measurementId: "G-N0LXC535PG",
 };
 
 // Initialize Firebase
