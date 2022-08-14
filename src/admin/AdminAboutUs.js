@@ -82,7 +82,7 @@ const AdminAboutUs = (props) => {
           <div className="container h-10">
             <div className="row d-flex align-items-center justify-content-center h-10">
               <h1 style={{ color: "#004077" }}>Our Services</h1>
-              <h4>Fresh Chickens and Eggs</h4>
+              <h4>Living Chickens and Eggs</h4>
             </div>
           </div>
         </section>
